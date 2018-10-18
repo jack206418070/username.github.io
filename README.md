@@ -16,7 +16,7 @@
 
 -[imagescss](https://jack206418070.github.io/username.github.io/imagecss.css)
 
--[pet website](https://jack206418070.github.io/username.github.io/pethw(1)206418070/body.html)
+--[pet website](https://jack206418070.github.io/username.github.io/pethw(1)206418070/body.html)
 
 ## Week 6
 
