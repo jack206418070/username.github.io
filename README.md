@@ -21,3 +21,5 @@
 ## Week 6
 
 * [ReadMe.md](https://github.com/jack206418070/username.github.io/blob/master/README.md)
+
+* [寵物第二版](https://jack206418070.github.io/username.github.io/206418070%20pet2_by_html5/index.html)
