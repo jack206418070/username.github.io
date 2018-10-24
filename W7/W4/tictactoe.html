@@ -1,0 +1,184 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="../test/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+
+    </style>
+    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
+    <link href='../test/main.css' rel='stylesheet'>
+</head>
+<script>
+    var turn = 0;
+        
+        function playRound(objDest) {
+            if (objDest.innerText == '\u00A0' && turn == 0) {
+                objDest.innerText = "O";
+                turn = 1;
+            } else if (objDest.innerText == '\u00A0' && turn == 1) {
+                objDest.innerText = "X";
+                turn = 0;
+            } else {
+                confirm("方塊已經被佔用了!");
+            }
+        
+
+            if (checkRow()) {
+                if (turn == 0) {
+                    if (confirm("玩家2贏了!\n\n要再玩一場嗎?"))
+                        clearTable();
+                } else if (turn == 1) {
+                    if (confirm("玩家1贏了!\n\n要再玩一場嗎?"))
+                        clearTable();
+                }
+            } else if (tableIsFull()) {
+                if (confirm("平手\n\n要再玩一場嗎?"))
+                    clearTable();
+            }
+        }
+
+
+        function clearTable() {
+            for (i = 0; i <= 2; i++) {
+                eval("ttt" + i + "0" + ".innerHTML = '&nbsp;';")
+                eval("ttt" + i + "1" + ".innerHTML = '&nbsp;';")
+                eval("ttt" + i + "2" + ".innerHTML = '&nbsp;';")
+            }
+
+        }
+
+
+        function checkRow() {
+
+            for (i = 0; i <= 2; i++) {
+
+                // 列
+                if (eval("compare(" + "ttt" + i + "0" + "," + "ttt" + i + "1" + "," + "ttt" + i + "2" + ")"))
+                    return true;
+
+
+                // 對角線
+                if (eval("compare(" + "ttt" + "0" + i + "," + "ttt" + "1" + "1" + "," + "ttt" + "2" + (2 - i) + ")"))
+                    return true;
+
+                // 欄
+                if (eval("compare(" + "ttt" + "0" + i + "," + "ttt" + "1" + i + "," + "ttt" + "2" + i + ")"))
+                    return true;
+
+            }
+            return false;
+        }
+
+        function tableIsFull() {
+            for (i = 0; i <= 2; i++)
+                for (j = 0; j <= 2; j++)
+                    if (eval("ttt" + i + j).innerText == '\u00A0')
+                        return false;
+            return true;
+        }
+
+        function compare(obj0, obj1, obj2) {
+            if (obj0.innerText != '\u00A0' && obj1.innerText != '\u00A0' && obj2.innerText != '\u00A0')
+                if (obj0.innerText == obj1.innerText && obj1.innerText == obj2.innerText)
+                    return true;
+                
+            return false;
+        }
+
+    </script>
+
+<body style="background: #DDDDDD;">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                </a>
+                <a class="brand" href="#" style="font-family: fantasy;">靜態網頁</a>
+                <div class="nav-collapse collapse">
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="../test/tkuasing.html" style="font-size:20px;">首頁</a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size:20px; color:#FFC8B4;">網頁練習實作<b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="../W2/pokenom.html">W2-POKEMON</a>
+                                </li>
+                                <li>
+                                    <a href="../W3/tku60.html">W3-淡江大戲</a>
+                                </li>
+                                <li>
+                                    <a href="../W4/tictactoe.html">W4-井字JS練習版(遊戲)</a>
+                                </li>
+                                <li>
+                                    <a href="../W5/css%E7%B7%B4%E7%BF%92.html">W5-images-css練習</a>
+                                </li>
+                                <li>
+                                    <a href="../W6/index.html">W6-petweb2</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <form class="navbar-form pull-right">
+                        <input class="span2" type="text" placeholder="Email">
+                        <input class="span2" type="password" placeholder="Password">
+                        <button type="submit" class="btn">Sign in</button>
+                    </form>
+                </div>
+                <!--/.nav-collapse -->
+            </div>
+        </div>
+    </div>
+    <p align="center" style="font-size:100px; margin: 30px;">井字遊戲</p>
+    <table align="center" frame=void border=1 style="border-collapse:collapse; width:600px;  height:600px; top:80px;  position: relative;" bordercolor="#000000">
+        <tr>
+            <td width=50 align="center" id="ttt00" onClick="playRound(this);" style="font-size: 45px;">&nbsp;</td>
+            <td width=50 align="center" id="ttt01" onClick="playRound(this);" style="font-size: 45px;">&nbsp;</td>
+            <td width=50 align="center" id="ttt02" onClick="playRound(this);" style="font-size: 45px;">&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td width=50 align="center" id="ttt10" onClick="playRound(this);" style="font-size: 45px;">&nbsp;</td>
+            <td width=50 align="center" id="ttt11" onClick="playRound(this);" style="font-size: 45px;">&nbsp;</td>
+            <td width=50 align="center" id="ttt12" onClick="playRound(this);" style="font-size: 45px;">&nbsp;</td>
+        </tr>
+
+        <tr>
+            <td width=50 align="center" id="ttt20" onClick="playRound(this);" style="font-size: 45px;">&nbsp;</td>
+            <td width=50 align="center" id="ttt21" onClick="playRound(this);" style="font-size: 45px;">&nbsp;</td>
+            <td width=50 align="center" id="ttt22" onClick="playRound(this);" style="font-size: 45px;">&nbsp;</td>
+        </tr>
+    </table>
+    
+    <p align="center" style="font-size: 20px; color:red; position: relative; top:10%;">玩家1=O</p>
+    <p align="center" style="font-size: 20px; color:red; position: relative; top:10%;">玩家2=X</p>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
+    <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src='../test/main.js'></script>
+</body>
+
+</html>
