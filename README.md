@@ -23,3 +23,7 @@
 * [ReadMe.md](https://github.com/jack206418070/username.github.io/blob/master/README.md)
 
 * [寵物第二版](https://jack206418070.github.io/username.github.io/W6/index.html)
+
+## Week 7
+
+* [整合作業](https://jack206418070.github.io/username.github.io/W7/test/tkuasing.html)
