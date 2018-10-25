@@ -11,6 +11,7 @@
 ## Week 4
 
 * [Tic Tac Toe](https://jack206418070.github.io/username.github.io/W4/tictactoe.html)
+* [blog](https://jack206418070.github.io/username.github.io/W7/W4/blog.html)
 
 ## Week 5
 
