@@ -3,11 +3,15 @@
 
 <head>
     <meta charset="utf-8">
+    <title>Bootstrap, from Twitter</title>
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <link href="../W7/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- Le styles -->
+    <!-- TODO: make sure bootstrap.min.css points to BootTheme generated file
+        -->
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css" />
     <style type="text/css">
         body {
             padding-top: 60px;
@@ -15,6 +19,8 @@
         }
 
     </style>
+    <!-- TODO: make sure bootstrap-responsive.min.css points to BootTheme
+        generated file -->
     <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-responsive.min.css" rel="stylesheet">
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -26,10 +32,40 @@
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
     <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-    <link href='../test/main.css' rel='stylesheet'>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <link href='main.css' rel='stylesheet'>
+    <!--    <link rel="stylesheet" href="images_gallery.css">-->
+    <style>
+        div.gallery {
+            margin: 5px;
+            border: 1px solid #ccc;
+            float: left;
+            width: 190px;
+        }
 
+        div.gallery:hover {
+            border: 1px solid #777;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+        #img1{
+            width: 190px;
+            height: 180px;
+        }
+        #img_div{
+            margin: 300px auto;
+            width: 800px;
+            height: 600px;
+        }
+        #boxRow{
+            width: 700px;
+            height: 190px;
+        }
+
+    </style>
+</head>
 
 <body>
     <div class="navbar navbar-inverse navbar-fixed-top">
@@ -40,11 +76,11 @@
                     <span class="icon-bar"></span>
 
                 </a>
-                <a class="brand" href="../W7/tkuasing.html" style="font-family: fantasy;">靜態網頁</a>
+                <a class="brand" href="#" style="font-family: fantasy;">靜態網頁</a>
                 <div class="nav-collapse collapse">
                     <ul class="nav">
                         <li class="active">
-                            <a href="../test/tkuasing.html" style="font-size:20px;">首頁</a>
+                            <a href="#" style="font-size:20px;">首頁</a>
                         </li>
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="font-size:20px; color:#FFC8B4;">網頁練習實作<b class="caret"></b>
@@ -84,56 +120,84 @@
             </div>
         </div>
     </div>
-    <div id="main">
-        <aside>
-            <iframe width="100%" height="98%" src="https://www.youtube.com/embed/RechrtUxfQc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-
-        </aside>
 
 
 
-        <article>
-            <div class="box" style="background-color:#FFCCCC;">
-                <div class="child1" style="line-height:100px; ">1</div>
-                <div class="child2"><img src="images/TKU1.jpg" /></div>
-                <div class="child3" style="padding: 5px">
-                    <p />淡江大戲《那些淡江教我們的事》part1</div>
+
+
+
+    <div id="img_div">
+        <div id="boxRow">
+            <div class="gallery">
+                <a target="_blank" href="fjords.jpg">
+                    <img src="http://i.imgur.com/qK42fUu.jpg" alt="Cinque Terre" id="img1">
+                </a>
+
             </div>
 
-            <div class="box" style="background-color:#FFCCCC;">
-                <div class="child1" style="line-height:100px;">2</div>
-                <div class="child2"><img src="images/TKU2.jpg" /></div>
-                <div class="child3" style="padding: 5px">
-                    <p />淡江大戲《那些淡江教我們的事》part2</div>
+            <div class="gallery">
+                <a target="_blank" href="forest.jpg">
+                    <img src="https://images.unsplash.com/photo-1435771112039-1e5b2bcad966?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450" alt="Forest" id="img1">
+                </a>
+
             </div>
 
-            <div class="box" style="background-color:#FFCCCC;">
-                <div class="child1" style="line-height:100px;">3</div>
-                <div class="child2"><img src="images/TKU3.jpg" /></div>
-                <div class="child3" style="padding: 5px">
-                    <p />淡江大戲《那些淡江教我們的事》part3</div>
+            <div class="gallery">
+                <a target="_blank" href="lights.jpg">
+                    <img src="https://images.unsplash.com/photo-1442406964439-e46ab8eff7c4?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450" alt="Northern Lights" id="img1">
+                </a>
+
+            </div>
+        </div>
+        <div id="boxRow">
+            <div class="gallery">
+                <a target="_blank" href="mountains.jpg">
+                    <img src="https://images.unsplash.com/photo-1439524970634-649c37a69e5c?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1450&h=825&fit=crop&s=bfda9916c885869b43b70738693428d9" alt="Mountains" id="img1">
+                </a>
+
             </div>
 
-            <div class="box" style="background-color:#FFCCCC;">
-                <div class="child1" style="line-height:100px;">4</div>
-                <div class="child2"><img src="images/TKU4.jpg" /></div>
-                <div class="child3" style="padding: 5px">
-                    <p />淡江大戲《那些淡江教我們的事》part4</div>
+            <div class="gallery">
+                <a target="_blank" href="mountains.jpg">
+                    <img src="https://images.unsplash.com/photo-1444090542259-0af8fa96557e?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450" alt="Mountains" id="img1">
+                </a>
+
             </div>
 
-            <div class="box" style="background-color:#FFCCCC;">
-                <div class="child1" style="line-height:100px;">5</div>
-                <div class="child2"><img src="images/TKU5.jpg" /></div>
-                <div class="child3" style="padding: 5px">
-                    <p />淡江大戲《那些淡江教我們的事》part5</div>
+            <div class="gallery">
+                <a target="_blank" href="mountains.jpg">
+                    <img src="https://images.unsplash.com/photo-1434543177303-ef2cc7707e0d?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450" alt="Mountains" id="img1">
+                </a>
+
+            </div>
+        </div>
+        <div id="boxRow">
+            <div class="gallery">
+                <a target="_blank" href="mountains.jpg">
+                    <img src="https://images.unsplash.com/photo-1436262513933-a0b06755c784?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450" alt="Mountains" id="img1">
+                </a>
+
             </div>
 
-        </article>
+            <div class="gallery">
+                <a target="_blank" href="mountains.jpg">
+                    <img src="https://images.unsplash.com/photo-1439396087961-98bc12c21176?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450" alt="Mountains" id="img1">
+                </a>
+
+            </div>
+
+            <div class="gallery">
+                <a target="_blank" href="mountains.jpg">
+                    <img src="https://images.unsplash.com/photo-1439694458393-78ecf14da7f9?dpr=2&fit=crop&fm=jpg&h=825&q=50&w=1450" alt="Mountains" id="img1">
+                </a>
+
+            </div>
+        </div>
     </div>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
     </script>
     <script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-    <script src='../test/main.js'></script>
+    <script src='main.js'></script>
 </body>
 
 </html>
