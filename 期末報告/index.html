@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/all.css" class="css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <title>Project home</title>
+</head>
+
+<body>
+    <!-- START HERE -->
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand text-light">Project</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarToggleExternalContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="./index.html">首頁</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="#">關於</a>
+                    </li>
+                    <li class="nav-item  dropdown">
+                        <a class="nav-link mx-2  dropdown-toggle" data-toggle="dropdown" href="#">
+                            <i class="fab fa-wordpress-simple"></i> 靜態網頁作業
+                        </a>
+                        <div class="dropdown-menu">
+                            <a href="./W1/pokemon.html" class="dropdown-item"><i class="fas fa-paw"></i> hw-POKEMON</a>
+                            <a href="./W2/tku60.html" class="dropdown-item"><i class="fas fa-school"></i> hw-tku60</a>
+                            <a href="./W3/tictactoe.html" class="dropdown-item"><i class="fas fa-gamepad"></i> hw-tic
+                                tac toe</a>
+                            <a href="./W4/blog.html" class="dropdown-item"><i class="fab fa-blogger-b"></i> hw-blog</a>
+                            <a href="./W5/imagescss.html" class="dropdown-item"><i class="fas fa-images"></i>
+                                hw-imagescss</a>
+                            <a href="./W6/poetweb.html" class="dropdown-item"><i class="fas fa-paw"></i> hw-petweb</a>
+                            <a href="./W7/imagecard.html" class="dropdown-item"><i class="fas fa-credit-card"></i>
+                                hw-image-card</a>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="https://www.facebook.com/junrong.zhang1"><i class="fab fa-facebook-square"></i>
+                            Facebook</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a class="nav-link" href="https://github.com/jack206418070/username.github.io"><i class="fab fa-github"></i>
+                            Github</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- header -->
+    <header class="pink py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h1 class="text-light"><i class="far fa-map"></i> 內容簡介</h1>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- action -->
+    <!-- <section class=" bg-light py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <a class="btn btn-primary btn-block" href="#"><i class="fas fa-plus"></i> ADD posts</a>
+                </div>
+                <div class="col-md-3">
+                    <a class="btn btn-success btn-block" href="#"><i class="fas fa-plus"></i> ADD Category</a>
+                </div>
+                <div class="col-md-3">
+                    <a class="btn btn-warning btn-block" href="#"><i class="fas fa-plus"></i> ADD Users </a>
+                </div>
+            </div>
+        </div>
+    </section>
+   !-->
+    <section style="height: 600px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <h3>Pokemon</h3>
+                    <p>關於這一個作業改寫遇到的問題,應該是table要做成響應式的方式,我選擇了一種在小裝置的時候會有橫向移動的選擇,利用table-responsive-md,來達到這種效果</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>tku60</h3>
+                    <p>Tku60 在做的過程中基本上沒有遇到太大的問題,只是在一些細節處理上用了另外的css 去對不同裝置的時候用media多一點控制,使其不侷限在boostrap的框架裝</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>tictactoe</h3>
+                    <p>這個題目再改寫的時候,遇到切圖,本來想要用文字去撐開table中的tr不過後來想了一想還是切了一張圖片用來以後寫javascript來達到翻圖的效果</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>blog</h3>
+                    <p>blog這基本上就是多了一個media去控制不同裝置下文字的大小以及一點點的排版</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>imagescss</h3>
+                    <p>本來想直接用bootstrap的grid去做 後來想了一想練習了一下 media query 寫了兩種裝置 768px 569px 分別對了三層的圖片做了不同的變化</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>petweb</h3>
+                    <p>這是一個還沒完全完成的地方 還在思考如何在優化排版 覺得用原本的做起來太卡了 只稍微做出了一個樣本</p>
+                </div>
+                <div class="col-md-3">
+                    <h3>imagecard</h3>
+                    <p>card 的 grid系統應該上課都練習了很多~! 沒什麼太大的問題</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="bg-dark text-light pt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <h4>Copyright <i class="far fa-copyright"></i> 2018 TKU-CHANG</h4>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </footer>
+    <!-- form -->
+    <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Get the current year for the copyright
+        $('#year').text(new Date().getFullYear());
+    </script>
+</body>
+
+</html>
